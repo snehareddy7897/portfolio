@@ -2,7 +2,7 @@
         scroll-behavior:smooth;
     }
     .my-container{
-    height:100vh;
+    min-height:100vh;
     text-align:center;
     background-color:aliceblue;
     border: 5px solid navy;
@@ -16,11 +16,11 @@
     align-items:center;
     background:linear-gradient(to right,navy,purple);
     color: white;
-    min-height:100vh;
+    
     }
 h1{
     
-    color : royalblue;
+    color : white;
     text-align:center;
     font-size:50px;
     text-decoration:underline;
@@ -39,12 +39,16 @@ p{
 }
 img{
     width:200px;
-    height:200px;
+    height: auto;
     border-radius:15px;
     border: 3px solid navy;
     margin-bottom: 20px;
     transition: 0.3s;
-    margin-top: 20px;   
+    margin-top: 20px; 
+    max-width: 100;
+    object-fit: cover;
+    
+
 }
 nav{
     background-color: navy;
@@ -57,7 +61,7 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    margin:20px;
+    margin:10px;
     font-size:20px;
     font-weight:bold;
 }
@@ -78,7 +82,7 @@ button{
 }
 button:hover{
     background-color:royalblue;
-    transfsorm: scale(1.1);
+    transform: scale(1.1);
 }
 img:hover{
 transform: scale(1.1);
@@ -100,10 +104,11 @@ section{
     margin:40px auto;
     text-align:center;
     background-color: white;
-    width : 80%;
+    width : 90%;
     padding : 25px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px gray;
+    max-width: 900px;
 
 }
 #skills ul{
@@ -180,10 +185,7 @@ a:hover{
 #education strong{
     color: navy;
 }
-#certifications p{
-    color: black;
-    font-size: 18px;
-}
+
 #certifications li{
     list-style: none;
     color: navy;
@@ -198,7 +200,7 @@ a:hover{
     width:80%;
     padding:25px;
     border-radius:15px;
-    box-shadow:0px 4px 10px gray;
+    box-shadow:o 4px 10px rgba(0,0,0,0,2);
 }
 #certifications h2{
     color:navy;
@@ -214,14 +216,16 @@ a:hover{
 .project-card{
     background:#f5f7ff;
     padding:20px;
-    margin:20px auto;
-    width:70%;
+    margin: 20px auto;
+    width: 90%;
     border-radius:10px;
     border:1px solid lightgray;
     text-align:center;
     display: block;
     margin-left:auto;
     margin-right:auto;
+    max-width: 400px;
+
     
 }
 .project-card h3{
@@ -230,10 +234,15 @@ a:hover{
 }
 .project-card p{
     color:black;
-    line-height:1.8;
+    line-height: 1.6;
     font-size:20px;
     display:block;
     margin:10px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: break-word;
+
 }
 #projects{
     text-align:center;
@@ -242,6 +251,33 @@ body{
     margin:0;
     padding:0
 }
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+    h1 {
+        font-size:35px;
+    }
+    section{
+        width:95%;
+        padding:15px;
+    }
+    .project-card{
+        width:95%;
+    }
+    img{
+        width:150px;
+        height:150px;
+    }
+}
+
 
 
 
